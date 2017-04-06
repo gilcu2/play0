@@ -21,4 +21,7 @@ class HomeController @Inject() extends Controller {
   def index = Action { implicit request =>
     Ok(views.html.index())
   }
+
+  def todo = TODO
+
 }
