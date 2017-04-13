@@ -64,6 +64,7 @@ class HomeController @Inject()(val messagesApi: MessagesApi) extends Controller 
   }
 
   def save = Action { implicit request =>
+    println("paso")
     val newProductForm = productForm.bindFromRequest()
 
     newProductForm.fold(
