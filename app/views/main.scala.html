@@ -6,9 +6,8 @@
 <head>
     <title>@title</title>
     <link rel="stylesheet" type="text/css" media="screen"
-          href='@routes.Assets.at("stylesheets/bootstrap.css")'>
-    <link rel="stylesheet" media="screen"
-          href="@routes.Assets.at(" stylesheets
+          href='@routes.Assets.versioned("stylesheets/bootstrap.css")'>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned(" stylesheets
     /main.css")">
 </head>
 <body>
@@ -17,7 +16,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="@routes.Application.index()">
+                <a class="brand" href="@routes.HomeController.index()">
                     @Messages("application.name")
                 </a>
             </div>
