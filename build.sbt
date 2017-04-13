@@ -8,6 +8,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.9"
 
 libraryDependencies += filters
+//libraryDependencies += "net.sf.barcode4j" % "barcode4j" % "2.0"
+
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0" % Test
 
 // Adds additional packages into Twirl
@@ -19,3 +21,7 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0
 fork := true // required for "sbt run" to pick up javaOptions
 
 javaOptions += "-Dplay.editor=http://localhost:63342/api/file/?file=%s&line=%s"
+
+//val appDependencies = Seq(
+//  "net.sf.barcode4j" % "barcode4j" % "2.0"
+//)

@@ -4,9 +4,13 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET /                               controllers.HomeController.index
 
 GET /products                       controllers.HomeController.list
+
+GET /products/:ean                  controllers.HomeController.show(ean: Long)
+
+#GET /barcode/:ean                   controllers.Barcodes.barcode(ean: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
