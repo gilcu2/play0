@@ -7,6 +7,7 @@ package models
 case class Product(ean: Long, name: String, description: String)
 
 object Product {
+
   var products = Set(
     Product(5010255079763L, "Paperclips Large",
       "Large Plain Pack of 1000"),
@@ -23,6 +24,10 @@ object Product {
   def findAll: List[Product] = products.toList.sortBy(_.ean)
 
   def findByEan(ean: Long): Option[Product] = products.find(_.ean == ean)
+
+  def add(product: Product) {
+    products = products + product
+  }
 
 }
 
